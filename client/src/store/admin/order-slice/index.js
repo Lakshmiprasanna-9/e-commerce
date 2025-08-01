@@ -11,7 +11,7 @@ export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
     const response = await axios.get(
-      `http://localhost:5001/api/admin/orders/get`
+      `https://e-commerce-backend-umng.onrender.com/api/admin/orders/get`
     );
 
     return response.data;
@@ -22,7 +22,7 @@ export const getOrderDetailsForAdmin = createAsyncThunk(
   "/order/getOrderDetailsForAdmin",
   async (id) => {
     const response = await axios.get(
-      `http://localhost:5001/api/admin/orders/details/${id}`
+      `https://e-commerce-backend-umng.onrender.com/api/admin/orders/details/${id}`
     );
 
     return response.data;
@@ -33,7 +33,7 @@ export const updateOrderStatus = createAsyncThunk(
   "/order/updateOrderStatus",
   async ({ id, orderStatus }) => {
     const response = await axios.put(
-      `http://localhost:5001/api/admin/orders/update/${id}`,
+      `https://e-commerce-backend-umng.onrender.com/api/admin/orders/update/${id}`,
       {
         orderStatus,
       }
